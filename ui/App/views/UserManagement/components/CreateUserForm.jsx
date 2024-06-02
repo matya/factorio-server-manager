@@ -31,11 +31,15 @@ const CreateUserForm = ({updateUserList}) => {
             <div className="mb-4">
                 <Label htmlFor="role" text="Role" />
                 <input className="shadow appearance-none border w-full py-2 px-3 text-black"
-                       {...register('role',{required: true})}
                        value="admin"
                        disabled={true}
                        type="text"
                        placeholder="Role"
+                />
+                <input
+                       {...register('role',{required: true})}
+                       value="admin"
+                       type="hidden"
                 />
                 <Error error={errors.role} message="Role is required"/>
             </div>
